@@ -1,33 +1,138 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+ 
+html,body,:root {
+  height: 100%;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #140C1F;
+  background-image: url('./assets/Milky\ Way.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.containerVectors {
+  background-image: url('./assets/Glowing\ Vectors.png');
+  background-repeat: no-repeat;
+
+}
+.navbar-background-gradient {
+  background: #f12711; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #ffffff39,
+    rgba(251, 133, 253, 0)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+
+  background: linear-gradient(
+    to bottom,
+    #ffffff20,
+    rgba(251, 133, 253, 0)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.pink-text-gradient {
+  background: -webkit-linear-gradient(
+    to right,
+    #fff,
+    #FB85FD,
+    #F81DFB,
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #fff,
+    #f922fc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hit-bg {
+  background-image: url('./assets/Blurr\ effec.png');
+  background-position: center;
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-blend-mode: hard-light;
+}
+
+.hero-Card-Gradient {
+  background: rgb(255,255,255);
+  background: linear-gradient(120deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 35%);
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+ 
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+ 
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+ 
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+ 
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+ 
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+ 
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+ 
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+ 
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+ 
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+ 
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+ 
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
